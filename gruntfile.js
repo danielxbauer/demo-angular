@@ -46,8 +46,18 @@
             }
         },
         watch: {
-            files: ['app/**/*.ts'],
-            tasks: ['typescript:dev']
+            js: {
+                files: ['app/**/*.ts'],
+                tasks: ['typescript:dev', 'includeSource:dev']
+            },
+            css: {
+                files: ['sass/**/*.scss'],
+                tasks: ['sass:dev']
+            },
+            html: {
+                files: ['app/index.tpl.html'],
+                tasks: ['includeSource:dev']
+            }
         }
     });
 
