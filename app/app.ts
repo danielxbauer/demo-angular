@@ -2,7 +2,7 @@
 
 module Demo {
   export var DemoApp = angular.module("demo-app", [
-    'ui.bootstrap',
+    //'ui.bootstrap',
     'ui.router'
   ]);
 }
