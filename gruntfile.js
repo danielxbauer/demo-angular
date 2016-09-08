@@ -13,7 +13,7 @@
             dev: "wwwroot",
             prod: ""
         },
-        
+
         clean: {
             dev: [
                 '<%= config.dev %>/js',
@@ -82,6 +82,11 @@
         wiredep: {
             dev: {
                 src: ['<%= config.dev %>/index.html']
+            },
+            overrides: {
+                'bootstrap-sass': {
+                    'main': ['../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js']
+                }
             }
         }
     });
