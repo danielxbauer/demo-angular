@@ -10,7 +10,8 @@
     <base href="/" />
 
     <!-- vendor css -->
-    
+    <!-- bower:css -->
+    <!-- endbower -->
 
     <!-- app css -->
     <!-- include: "type": "css", "files": "wwwroot/css/**/*.css" -->
@@ -26,11 +27,11 @@
     <div ui-view></div>
 
     <!-- vendor -->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- bower:js -->
+    <!-- endbower -->
     
     <!-- app -->
-    <!-- include: "type": "js", "files": "wwwroot/js/**/*.js" -->
+    <!-- include: "type": "js", "files": "wwwroot/js/app.js" -->
+    <!-- include: "type": "js", "files": ["wwwroot/js/**/*.js", "!wwwroot/js/app.js"] -->
 </body>
 </html>

@@ -1,9 +1,12 @@
 ﻿module.exports = function (grunt) {
+
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-include-source');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-wiredep');
 
     grunt.initConfig({
         config: {
@@ -12,7 +15,20 @@
         },
         
         clean: {
-            dev: ['<%= config.dev %>/js', '<%= config.dev %>/css', '<%= config.dev %>/index.html']
+            dev: [
+                '<%= config.dev %>/js',
+                '<%= config.dev %>/css',
+                '<%= config.dev %>/views',
+                '<%= config.dev %>/index.html'
+            ]
+        },
+        copy: {
+            dev: {
+                files: [
+                    /* copies html from app */
+                    { expand: true, cwd: 'app/', src: ['**/*.html', '!index.tpl.html'], dest: '<%= config.dev %>/views', filter: 'isFile' },
+                ]
+            }
         },
         typescript: {
             dev: {
@@ -54,12 +70,21 @@
                 files: ['sass/**/*.scss'],
                 tasks: ['sass:dev']
             },
-            html: {
+            index: {
                 files: ['app/index.tpl.html'],
-                tasks: ['includeSource:dev']
+                tasks: ['includeSource:dev', 'wiredep:dev']
+            },
+            views: {
+                files: ['app/**/*.html', '!app/index.tpl.html'],
+                tasks: ['copy']
+            }
+        },
+        wiredep: {
+            dev: {
+                src: ['<%= config.dev %>/index.html']
             }
         }
     });
 
-    grunt.registerTask('dev', ['clean:dev', 'typescript:dev', 'sass:dev', 'includeSource:dev', 'watch']);
+    grunt.registerTask('dev', ['clean:dev', 'copy:dev', 'typescript:dev', 'sass:dev', 'includeSource:dev', 'wiredep:dev', 'watch']);
 };

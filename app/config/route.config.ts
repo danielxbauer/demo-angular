@@ -7,7 +7,7 @@
                 url: "/",
                 controller: "HomeController",
                 controllerAs: "controller",
-                templateUrl: "/app/home/home.html"
+                templateUrl: "/wwwroot/views/home/home.html"
             });
             
             $urlRouterProvider.otherwise("/");
