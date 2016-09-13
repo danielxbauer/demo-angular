@@ -3,5 +3,15 @@ Demo project using Angular with Bootstrap
 
 ## setup
 ``` javascript
-npm install && bower install && typings install && grunt dev
+npm run setup
+```
+
+## development
+``` javascript
+grunt dev
+```
+
+## production (WIP)
+``` javascript
+grunt prod
 ```
