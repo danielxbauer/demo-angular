@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "setup": "npm install && bower install && typings install",
-    "dev": "grunt dev"    
+    "dev": "grunt dev"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-include-source": "^1.0.0",
     "grunt-sass": "^1.2.1",
