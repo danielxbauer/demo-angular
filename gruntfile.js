@@ -6,27 +6,39 @@
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-include-source');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-wiredep');
+
+    var vendors = [
+        'jquery/dist/jquery.min.js',
+        'angular/angular.min.js',
+        'angular-ui-router/release/angular-ui-router.js',
+        'bootstrap-sass/assets/javascripts/bootstrap.js'
+    ];
+    var vendorsInLib = vendors.map(function (path) { return 'wwwroot/libs/' + path; });
 
     grunt.initConfig({
         config: {
             dev: "wwwroot",
             prod: ""
         },
+        vendors: vendorsInLib,
 
         clean: {
             dev: [
                 '<%= config.dev %>/js',
                 '<%= config.dev %>/css',
                 '<%= config.dev %>/views',
+                '<%= config.dev %>/libs',
                 '<%= config.dev %>/index.html'
             ]
         },
         copy: {
             dev: {
                 files: [
-                    /* copies html from app */
+                    /* copies views to wwwroot */
                     { expand: true, cwd: 'app/', src: ['**/*.html', '!index.tpl.html'], dest: '<%= config.dev %>/views', filter: 'isFile' },
+
+                    /* copies bower_components to wwwroot/libs */
+                    { expand: true, cwd: 'bower_components/', src: vendors, dest: '<%= config.dev %>/libs', filter: 'isFile' }
                 ]
             }
         },
@@ -79,17 +91,7 @@
                 tasks: ['copy']
             }
         },
-        wiredep: {
-            dev: {
-                src: ['<%= config.dev %>/index.html']
-            },
-            overrides: {
-                'bootstrap-sass': {
-                    'main': ['../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js']
-                }
-            }
-        }
     });
 
-    grunt.registerTask('dev', ['clean:dev', 'copy:dev', 'typescript:dev', 'sass:dev', 'includeSource:dev', 'wiredep:dev', 'watch']);
+    grunt.registerTask('dev', ['clean:dev', 'copy:dev', 'typescript:dev', 'sass:dev', 'includeSource:dev']); //, 'watch']);
 };

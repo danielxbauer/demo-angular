@@ -10,8 +10,7 @@
     <base href="/" />
 
     <!-- vendor css -->
-    <!-- bower:css -->
-    <!-- endbower -->
+    <!-- include: "type": "css", "files": "wwwroot/libs/**/*.css" -->
 
     <!-- app css -->
     <!-- include: "type": "css", "files": "wwwroot/css/**/*.css" -->
@@ -27,9 +26,8 @@
     <div ui-view></div>
 
     <!-- vendor -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    
+    <!-- include: "type": "js", "files": "<%= vendors %>" -->
+
     <!-- app -->
     <!-- include: "type": "js", "files": "wwwroot/js/app.js" -->
     <!-- include: "type": "js", "files": ["wwwroot/js/**/*.js", "!wwwroot/js/app.js"] -->
