@@ -1,6 +1,5 @@
 ﻿[
   "jquery/dist/jquery.min.js",
   "angular/angular.min.js",
-  "angular-ui-router/release/angular-ui-router.js",
-  "bootstrap-sass/assets/javascripts/bootstrap.js"
+  "angular-ui-router/release/angular-ui-router.js"
 ]
