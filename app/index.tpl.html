@@ -10,10 +10,10 @@
     <base href="/" />
 
     <!-- vendor css -->
-    <!-- include: "type": "css", "files": "wwwroot/libs/**/*.css" -->
+    <!-- include: "type": "css", "files": "<%= vendorsCss %>" -->
 
     <!-- app css -->
-    <!-- include: "type": "css", "files": "wwwroot/css/**/*.css" -->
+    <!-- include: "type": "css", "files": "<%= appCss %>" -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,10 +26,9 @@
     <div ui-view></div>
 
     <!-- vendor -->
-    <!-- include: "type": "js", "files": "<%= vendors %>" -->
+    <!-- include: "type": "js", "files": "<%= vendorsJs %>" -->
 
     <!-- app -->
-    <!-- include: "type": "js", "files": "wwwroot/js/app.js" -->
-    <!-- include: "type": "js", "files": ["wwwroot/js/**/*.js", "!wwwroot/js/app.js"] -->
+    <!-- include: "type": "js", "files": "<%= appJs %>" -->
 </body>
 </html>
