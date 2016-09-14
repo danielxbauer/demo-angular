@@ -71,15 +71,15 @@
         watch: {
             app: {
                 files: ['app/**/*.ts'],
-                tasks: ['clean:devJs', 'typescript:dev', 'includeSource:dev']
+                tasks: ['setupVarsDev', 'clean:devJs', 'typescript:dev', 'includeSource:dev']
             },
             css: {
                 files: ['sass/**/*.scss'],
-                tasks: ['clean:devCss', 'sass:dev', 'includeSource:dev']
+                tasks: ['setupVarsDev', 'clean:devCss', 'sass:dev', 'includeSource:dev']
             },
             index: {
                 files: ['app/index.tpl.html'],
-                tasks: ['includeSource:dev']
+                tasks: ['setupVarsDev', 'includeSource:dev']
             },
             views: {
                 files: ['app/**/*.html', '!app/index.tpl.html'],

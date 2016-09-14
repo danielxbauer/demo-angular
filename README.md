@@ -11,7 +11,7 @@ npm run setup
 grunt dev
 ```
 
-## production (WIP)
+## production
 ``` javascript
 grunt prod
 ```
