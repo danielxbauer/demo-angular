@@ -1,7 +1,7 @@
 ﻿module Demo {
     export class HomeController {
 
-        public test = 1;
+        public notes: string[] = ["note 1", "note 2", "note 3"];
 
         static $inject = [];
         constructor() {

@@ -1,0 +1,51 @@
+﻿/// <reference path="../_variables.scss" />
+
+nav.navbar {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+
+    .navbar-left {
+        float: left;
+    }
+
+    .navbar-right {
+        float: right;
+    }
+
+    .brand {
+        display: block;
+        padding: 15px 0;
+        line-height: 20px;
+        font-size: 18px;
+        text-decoration: none;
+        color: $primary-color;
+
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+    }
+
+    .search {
+        padding: 10px;
+
+        input {
+            border: 0;
+            outline: 0;
+            font-size: 16px;
+            background: #F5F5F5;
+            border-radius: 3px;
+            padding: 5px;
+            height: 20px;
+        }
+    }
+}
+
+.navbar-margin {
+    padding-top: 50px;
+}
