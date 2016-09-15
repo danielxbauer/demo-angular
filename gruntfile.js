@@ -23,6 +23,7 @@
             /* above ones for watch task */
             devJs: '<%= config.dev %>/js',
             devCss: '<%= config.dev %>/css',
+            devVendors: '<%= config.dev %>/libs'
         },
         copy: {            
             /* copies bower_components to wwwroot/libs */
@@ -74,7 +75,7 @@
                 tasks: ['setupVarsDev', 'clean:devJs', 'typescript:dev', 'includeSource:dev']
             },
             css: {
-                files: ['sass/**/*.scss'],
+                files: ['sass/**/*.scss', 'app/**/*.scss'],
                 tasks: ['setupVarsDev', 'clean:devCss', 'sass:dev', 'includeSource:dev']
             },
             index: {
@@ -84,6 +85,10 @@
             views: {
                 files: ['app/**/*.html', '!app/index.tpl.html'],
                 tasks: ['copy:devViews']
+            },
+            vendors: {
+                files: ['app/vendors.json'],
+                tasks: ['setupVarsDev', 'clean:devVendors', 'copy:devVendor', 'includeSource:dev']
             }
         },
 
@@ -114,7 +119,7 @@
     grunt.registerTask('setupVarsDev', '', function () {
         var base = grunt.config('config').dev;
 
-        var vendors = grunt.file.readJSON("app/vendors.json");
+        var vendors = grunt.file.readJSON("app/vendors.json").dep;
         var vendorsInLib = vendors.map(function (path) { return 'wwwroot/libs/' + path; });
 
         var vendorsJs = vendorsInLib.filter(function (path) { return path.endsWith(".js"); });

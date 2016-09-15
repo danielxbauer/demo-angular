@@ -7,6 +7,8 @@
 // components
 @import "components/_navbar.scss";
 
+@import "../app/components/editNote/editNote.scss";
+
 
 // TODO: in own file
 ul {
@@ -21,14 +23,23 @@ ul {
             border-bottom: 1px solid #EEE;
         }
 
-        &:hover  {
+        &:hover {
             background-color: #F5F5F5;
             cursor: pointer;
         }
 
         a {
             text-decoration: none;
-            color: #212121;
+            color: #212121;            
+        }
+
+        .title {
+            width: calc(100% - 20px);
+            float: left;
+            /*display: block;*/
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
 }

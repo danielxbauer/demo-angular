@@ -1,5 +1,16 @@
-﻿[
-  "jquery/dist/jquery.min.js",
-  "angular/angular.min.js",
-  "angular-ui-router/release/angular-ui-router.js"
-]
+﻿{
+  "dep": [
+    "jquery/dist/jquery.min.js",
+
+    "angular/angular.min.js",
+
+    "angular-ui-router/release/angular-ui-router.js",
+
+    "mdi/css/materialdesignicons.min.css",
+    "mdi/fonts/materialdesignicons-webfont.eot",
+    "mdi/fonts/materialdesignicons-webfont.svg",
+    "mdi/fonts/materialdesignicons-webfont.ttf",
+    "mdi/fonts/materialdesignicons-webfont.woff",
+    "mdi/fonts/materialdesignicons-webfont.woff2"
+  ]
+}

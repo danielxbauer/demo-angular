@@ -1,5 +1,9 @@
 ﻿<ul>
-    <li ng-repeat="note in controller.notes">
-        <a href="#">{{note}}</a>
+    <li ng-repeat="note in controller.notes" 
+        ng-click="controller.openNote(note.id)">
+        <a href="#">
+            <span class="title">{{ note.title }}</span> 
+            <i class="mdi mdi-18px mdi-chevron-right"></i>
+        </a>
     </li>
 </ul>

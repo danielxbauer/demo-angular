@@ -1,0 +1,30 @@
+.note-edit {
+    input[type=text] {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        font-size: 18px;
+        line-height: 24px;
+        outline: none;
+
+        border: 0;
+        border-bottom: 1px solid #EEE;
+    }
+
+    textarea {
+        width: 100%;
+        height: calc(100vh - 200px);
+        resize: none;
+
+        outline: none;
+        border: none;
+        font-size: 14px;
+
+        line-height: 20px;
+        background-color: white;
+        background-image: linear-gradient(to bottom, white 19px, #EEE 19px);
+        background-repeat: repeat-y;
+        background-size: 100% 20px;
+    }
+}

@@ -9,6 +9,16 @@
                 controllerAs: "controller",
                 templateUrl: "/wwwroot/views/home/home.html"
             });
+
+            $stateProvider.state("detail", {
+                url: "/note/:id",
+                controller: "DetailController",
+                controllerAs: "controller",
+                templateUrl: "/wwwroot/views/detail/detail.html",
+                resolve:{
+                    id: ($stateParams) => $stateParams.id
+                }
+            });
             
             $urlRouterProvider.otherwise("/");
             $locationProvider.html5Mode({ enabled: true, requireBase: true });

@@ -1,6 +1,15 @@
 ﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
+* {
+    box-sizing: border-box;    
+}
+
 body {
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Typography
+input, textarea {
     font-family: 'Open Sans', sans-serif;
 }
