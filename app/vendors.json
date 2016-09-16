@@ -11,6 +11,11 @@
     "mdi/fonts/materialdesignicons-webfont.svg",
     "mdi/fonts/materialdesignicons-webfont.ttf",
     "mdi/fonts/materialdesignicons-webfont.woff",
-    "mdi/fonts/materialdesignicons-webfont.woff2"
+    "mdi/fonts/materialdesignicons-webfont.woff2",
+
+    "textAngular/dist/textAngular.css",
+    "textAngular/dist/textAngular-rangy.min.js",
+    "textAngular/dist/textAngular-sanitize.min.js",
+    "textAngular/dist/textAngular.min.js"
   ]
 }

@@ -1,4 +1,10 @@
 ﻿<div class="note-edit">
     <input type="text" ng-model="controller.note.title" />
-    <textarea ng-model="controller.note.text"></textarea>
+    
+    <div text-angular ng-model="controller.note.text" 
+         ta-toolbar-class="note-toolbar" 
+         ta-toolbar-group-class="note-btn-group" 
+         ta-toolbar-button-class="note-btn" 
+         ta-toolbar-active-button-class="active"
+         ta-toolbar="controller.editorOptions"></div>
 </div>

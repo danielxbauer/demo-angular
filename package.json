@@ -1,11 +1,12 @@
 {
   "name": "demo-angular",
   "version": "1.0.0",
-  "description": "just a demo angular project with bootstrap",
+  "description": "just a demo angular project",
   "main": "index.js",
   "scripts": {
     "setup": "npm install && bower install && typings install",
-    "dev": "grunt dev"
+    "dev": "grunt dev",
+    "prod": "grunt prod"
   },
   "repository": {
     "type": "git",
