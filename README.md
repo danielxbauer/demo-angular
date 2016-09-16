@@ -1,5 +1,5 @@
 # Demo Angular Project Structure
-Demo project using Angular with Bootstrap
+Demo project using Angular
 
 ## setup
 ``` javascript
@@ -8,10 +8,10 @@ npm run setup
 
 ## development
 ``` javascript
-grunt dev
+npm run dev
 ```
 
 ## production
 ``` javascript
-grunt prod
+npm run prod
 ```
