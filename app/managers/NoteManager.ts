@@ -40,6 +40,20 @@
 
             return defer.promise;
         }    
+
+        public createNote(note: INote): ng.IPromise<INote> {
+            var defer = this.$q.defer();
+
+            // Normally the note object is sent to the server which
+            // saves it to the database causing the id to be set.
+            // But we just simulate it here:
+
+            note.id = Math.floor((Math.random() * 10000) + 1);
+            this.notes.push(note);            
+            defer.resolve(note);
+
+            return defer.promise;
+        }
     }
 
     DemoApp.service("NoteManager", NoteManager);

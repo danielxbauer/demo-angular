@@ -1,4 +1,6 @@
-﻿<ul>
+﻿<button class="btn btn-primary" ng-click="controller.createNote()">New Note</button>
+
+<ul>
     <li ng-repeat="note in controller.notes" 
         ng-click="controller.openNote(note.id)">
         <a href="#">

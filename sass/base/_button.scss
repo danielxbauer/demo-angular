@@ -1,0 +1,20 @@
+﻿.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #333;
+    background-color: #eee;
+    
+    &:hover {
+        background-color: #ddd;
+    }
+
+    &:active {
+        background-color: #ccc;
+    }
+}

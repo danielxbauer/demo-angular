@@ -21,8 +21,24 @@
                 });
         }
 
-        private openNote(id: number): void {
+        public openNote(id: number): void {
             this.$state.go("detail", { id: id });
+        }
+
+        public createNote(): void {
+            var note: INote = {
+                id: 0,
+                text: "",
+                title: "New Note"
+            };
+
+            this.noteManager.createNote(note).then(
+                (note: INote) => {
+                    this.openNote(note.id);
+                },
+                (reason: any) => {
+                    console.error(reason);
+                });
         }
     }
 
