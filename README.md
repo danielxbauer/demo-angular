@@ -2,9 +2,9 @@
 Just a simple angular demo project to show off that you can use angular 1 in a angular 2 way by using components and typescript.
 
 ## overview
-![Home](assets/note1.png)
+![Home](assets/note1.PNG)
 
-![Detail](assets/note2.png)
+![Detail](assets/note2.PNG)
 
 ## install
 ``` javascript
