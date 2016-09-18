@@ -1,14 +1,17 @@
-﻿<div>
-    <button class="btn btn-primary" ng-click="controller.createNote()">New Note</button>
-    <input type="text" placeholder="Search" />
-</div>
+﻿<loader ng-if="controller.isLoading"></loader>
 
-<ul class="item-list">
-    <li ng-repeat="note in controller.notes" 
-        ng-click="controller.openNote(note.id)">
-        <a href="#">
-            <span class="title">{{ note.title }}</span> 
-            <i class="mdi mdi-18px mdi-chevron-right"></i>
-        </a>
-    </li>
-</ul>
+<div ng-if="!controller.isLoading">
+    <div>
+        <button class="btn btn-primary" ng-click="controller.createNote()">New Note</button>
+    </div>
+
+    <ul class="item-list mt-10">
+        <li ng-repeat="note in controller.notes"
+            ng-click="controller.openNote(note.id)">
+            <a href="#">
+                <span class="title">{{ note.title }}</span>
+                <i class="mdi mdi-18px mdi-chevron-right"></i>
+            </a>
+        </li>
+    </ul>
+</div>

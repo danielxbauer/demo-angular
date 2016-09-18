@@ -39,6 +39,6 @@
         },
         controller: EditNoteComponent,
         controllerAs: "controller",
-        templateUrl: "wwwroot/views/components/editNote/editNote.html"
+        templateUrl: "wwwroot/views/editNote/editNote.html"
     });
 }

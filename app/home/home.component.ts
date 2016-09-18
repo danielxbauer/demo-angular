@@ -2,6 +2,7 @@
     
     export class HomeComponent {
 
+        public isLoading: boolean = false;
         public notes: INote[] = [];
 
         static $inject = ["NoteManager", "$state"];
@@ -15,12 +16,16 @@
         }
 
         private loadNotes(): void {
+            this.isLoading = true;
             this.noteManager.loadNotes().then(
                 (notes: INote[]) => {
                     this.notes = notes;
                 },
                 (reason: any) => {
                     console.error(reason);
+                }).finally(
+                () => {
+                    this.isLoading = false;
                 });
         }
 

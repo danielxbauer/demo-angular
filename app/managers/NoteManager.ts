@@ -1,8 +1,9 @@
 ﻿module Demo {
     export class NoteManager {
-        static $inject = ["$q"];
+        static $inject = ["$q", "$timeout"];
         constructor(
-            private $q: ng.IQService) {
+            private $q: ng.IQService,
+            private $timeout: ng.ITimeoutService) {
         }
 
         /* Normally you would inject the $http service and
@@ -10,7 +11,7 @@
          * 
          * return this.$http.get("/notes");
          *
-         * we fake the async responses with the QService.
+         * we fake the async responses with QService and Timeout.
          */
 
         private notes: INote[] = [
@@ -20,9 +21,15 @@
 
         public loadNotes(): ng.IPromise<INote[]> {
             var defer = this.$q.defer();
-            defer.resolve(this.notes);
+
+            // simulate a loading time of 1 sec
+            this.$timeout(() => {
+                defer.resolve(this.notes);
+            }, 500);
+
             return defer.promise;
         }
+
         public loadNote(noteId: number): ng.IPromise<INote> {
             var defer = this.$q.defer();
 
