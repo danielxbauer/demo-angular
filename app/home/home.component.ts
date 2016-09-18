@@ -1,5 +1,6 @@
 ﻿module Demo {
-    export class HomeController {
+    
+    export class HomeComponent {
 
         public notes: INote[] = [];
 
@@ -7,7 +8,9 @@
         constructor(
             private noteManager: NoteManager,
             private $state: ng.ui.IStateService) {
+        }
 
+        public $onInit() {
             this.loadNotes();
         }
 
@@ -42,5 +45,9 @@
         }
     }
 
-    DemoApp.controller("HomeController", HomeController);
+    DemoApp.component("home", {
+        controller: HomeComponent,
+        controllerAs: "controller",
+        templateUrl: "wwwroot/views/home/home.html"
+    });
 }

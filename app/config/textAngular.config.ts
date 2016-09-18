@@ -4,8 +4,6 @@
         static $inject = ["$provide"];
         constructor($provide) {
             $provide.decorator("taTools", ["$delegate", function (taTools) {
-                console.log(taTools);
-
                 taTools.h1.iconclass = "mdi mdi-18px mdi-format-header-1";
                 delete taTools.h1.buttontext;
 

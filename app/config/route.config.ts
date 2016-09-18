@@ -5,16 +5,12 @@
 
             $stateProvider.state("home", {
                 url: "/",
-                controller: "HomeController",
-                controllerAs: "controller",
-                templateUrl: "/wwwroot/views/home/home.html"
+                template: "<home></home>"
             });
 
             $stateProvider.state("detail", {
                 url: "/note/:id",
-                controller: "DetailController",
-                controllerAs: "controller",
-                templateUrl: "/wwwroot/views/detail/detail.html",
+                template: '<edit-note note-id="$resolve.id"></edit-note>',
                 resolve:{
                     id: ($stateParams) => $stateParams.id
                 }
