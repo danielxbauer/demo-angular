@@ -10,15 +10,12 @@
          * 
          * return this.$http.get("/notes");
          *
-         * we fake the async responses with the QServices.
+         * we fake the async responses with the QService.
          */
 
         private notes: INote[] = [
             { id: 1, title: "note 1", text: "note 1 text" },
-            { id: 2, title: "note 2", text: "note 2 text" },
-            { id: 3, title: "note 3", text: "note 3 text" },
-            { id: 4, title: "note 4", text: "note 4 text" },
-            { id: 5, title: "note 5", text: "note 5 text" }
+            { id: 2, title: "note 2", text: "note 2 text" }
         ];
 
         public loadNotes(): ng.IPromise<INote[]> {

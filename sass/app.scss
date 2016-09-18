@@ -6,43 +6,11 @@
 @import "base/_utility.scss";
 
 @import "base/_button.scss";
+@import "base/_forms.scss";
 
 // components
 @import "components/_navbar.scss";
+@import "components/_lists.scss";
 
-@import "../app/components/editNote/editNote.scss";
-
-
-// TODO: in own file
-ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-        list-style: none;
-        padding: 15px 10px;
-
-        &:not(:last-child) {
-            border-bottom: 1px solid #EEE;
-        }
-
-        &:hover {
-            background-color: #F5F5F5;
-            cursor: pointer;
-        }
-
-        a {
-            text-decoration: none;
-            color: #212121;            
-        }
-
-        .title {
-            width: calc(100% - 20px);
-            float: left;
-            /*display: block;*/
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    }
-}
+// libs
+@import "libs/_textAngular.scss";

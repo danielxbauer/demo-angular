@@ -1,4 +1,6 @@
-﻿.btn {
+﻿/// <reference path="../_variables.scss" />
+
+.btn {
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -8,13 +10,13 @@
 
 .btn-primary {
     color: #333;
-    background-color: #eee;
+    background-color: $grey-200;
     
     &:hover {
-        background-color: #ddd;
+        background-color: darken($grey-200, 10%);
     }
 
     &:active {
-        background-color: #ccc;
+        background-color: darken($grey-200, 20%);
     }
 }

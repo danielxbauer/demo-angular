@@ -1,6 +1,9 @@
-﻿<button class="btn btn-primary" ng-click="controller.createNote()">New Note</button>
+﻿<div>
+    <button class="btn btn-primary" ng-click="controller.createNote()">New Note</button>
+    <input type="text" placeholder="Search" />
+</div>
 
-<ul>
+<ul class="item-list">
     <li ng-repeat="note in controller.notes" 
         ng-click="controller.openNote(note.id)">
         <a href="#">

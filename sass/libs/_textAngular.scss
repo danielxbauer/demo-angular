@@ -1,22 +1,4 @@
-.note-edit {
-    input[type=text] {
-        width: 100%;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        font-size: 18px;
-        line-height: 24px;
-        outline: none;
-        border: 0;
-        border-bottom: 1px solid #EEE;
-
-        &:focus {
-            border-color: $primary-color;
-        }
-    }
-}
-
-
-.note-toolbar {
+﻿.note-toolbar {
     margin-bottom: 10px;
 }
 
@@ -57,7 +39,6 @@ button.note-btn {
     }
 }
 
-/* TODO: in own file! */
 /* overriding the default styles */
 .ta-editor {
     outline: none !important;
